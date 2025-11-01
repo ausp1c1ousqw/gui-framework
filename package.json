@@ -1,0 +1,13 @@
+{
+  "name": "@automation-framework/gui-framework",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "./src/index.js",
+  "dependencies": {
+    "@automation-framework/core": "github:ausp1c1ousqw/core-for-frameworks",
+    "@wdio/allure-reporter": "^8.35.0",
+    "chai": "^4.3.7",
+    "webdriverio": "^8.35.0"
+  },
+  "devDependencies": {}
+}
