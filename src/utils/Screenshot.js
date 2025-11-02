@@ -1,14 +1,13 @@
 import path from "path";
 import { writeFile } from "fs/promises";
 import { ensureDirExists, generateTimestampedFileName } from "@automation-framework/core";
-import Framework from "../configs/Framework.js";
-const { config } = Framework;
+import { Framework as fw } from "../configs/Framework.js";
 
 class Screenshot {
   static async take() {
     try {
       const screenshot = await browser.takeScreenshot();
-      const screenshotsDir = ensureDirExists(`${config.debugDirPath}//screenshots`);
+      const screenshotsDir = ensureDirExists(`${fw.config.debugDirPath}//screenshots`);
       const screenshotName = generateTimestampedFileName("png");
       const screenshotPath = path.join(screenshotsDir, screenshotName);
 

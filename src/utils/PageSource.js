@@ -1,14 +1,13 @@
 import path from "path";
 import { writeFile } from "fs/promises";
 import { ensureDirExists, generateTimestampedFileName } from "@automation-framework/core";
-import Framework from "../configs/Framework.js";
-const { config } = Framework;
+import { Framework as fw } from "../configs/Framework.js";
 
 class PageSource {
   static async get() {
     try {
       const pageSource = await browser.getPageSource();
-      const pageSourceDir = ensureDirExists(`${config.debugDirPath}/page_sources`);
+      const pageSourceDir = ensureDirExists(`${fw.config.debugDirPath}/page_sources`);
       const pageSourceName = generateTimestampedFileName("html");
       const pageSourcePath = path.join(pageSourceDir, pageSourceName);
 
