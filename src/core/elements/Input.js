@@ -1,5 +1,6 @@
 import BaseElement from "../BaseElement.js";
-import { logger } from "@automation-framework/core";
+import Framework from "../configs/Framework.js";
+const { logger } = Framework;
 
 class Input extends BaseElement {
   constructor(elementOrLocator, name) {
