@@ -1,6 +1,6 @@
 import path from "path";
 import { writeFile } from "fs/promises";
-import { ensureDirExists, generateTimestampedFileName, logger } from "@automation-framework/core";
+import { ensureDirExists, generateTimestampedFileName } from "@automation-framework/core";
 import Framework from "../configs/Framework.js";
 const { config } = Framework;
 
