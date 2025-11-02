@@ -1,7 +1,7 @@
 import path from "path";
 import { writeFile } from "fs/promises";
 import { ensureDirExists, generateTimestampedFileName } from "@automation-framework/core";
-import { Framework as fw } from "../configs/Framework.js";
+import fw from "../configs/Framework.js";
 
 class PageSource {
   static async get() {
