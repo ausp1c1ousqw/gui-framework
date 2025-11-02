@@ -1,5 +1,5 @@
 import BaseElement from "../BaseElement.js";
-import Framework from "../configs/Framework.js";
+import Framework from "../../configs/Framework.js";
 const { logger } = Framework;
 
 class Input extends BaseElement {
