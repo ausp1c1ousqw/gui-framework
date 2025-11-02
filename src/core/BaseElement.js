@@ -1,6 +1,5 @@
-import Config from "../utils/Config.js";
-import { logger } from "@automation-framework/core";
-const { timeouts } = Config.get();
+import Framework from "../configs/Framework.js";
+const { logger, config } = Framework;
 
 class BaseElement {
   constructor(elementOrLocator, name, type) {
@@ -51,19 +50,19 @@ class BaseElement {
     }, "Move mouse to element");
   }
 
-  async waitForExist(timeout = timeouts.medium) {
+  async waitForExist(timeout = config.timeouts.medium) {
     await this.#actionOnElement(async (el) => {
       await el.waitForExist({ timeout });
     }, "Waiting for element to exist");
   }
 
-  async waitForDisplayed(timeout = timeouts.medium) {
+  async waitForDisplayed(timeout = config.timeouts.medium) {
     await this.#actionOnElement(async (el) => {
       await el.waitForDisplayed({ timeout });
     }, "Waiting for element to be displayed");
   }
 
-  async waitForClickable(timeout = timeouts.medium) {
+  async waitForClickable(timeout = config.timeouts.medium) {
     await this.#actionOnElement(async (el) => {
       await el.waitForClickable({ timeout });
     }, "Waiting for element to be clickable");

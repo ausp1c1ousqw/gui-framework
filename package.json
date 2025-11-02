@@ -1,5 +1,5 @@
 {
-  "name": "@automation-framework/gui-framework",
+  "name": "@automation-framework/gui",
   "version": "1.0.0",
   "type": "module",
   "main": "./src/index.js",
@@ -8,6 +8,5 @@
     "@wdio/allure-reporter": "^8.35.0",
     "chai": "^4.3.7",
     "webdriverio": "^8.35.0"
-  },
-  "devDependencies": {}
+  }
 }

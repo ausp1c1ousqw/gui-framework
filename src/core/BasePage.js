@@ -1,6 +1,7 @@
 import * as pageHelpers from "./pageHelpers.js";
 import * as utils from "../utils/utils.js";
-import { logger } from "@automation-framework/core";
+import Framework from "../configs/Framework.js";
+const { logger } = Framework;
 
 class BasePage {
   constructor(pageURL, mainEl, expectedTextOfMainEl) {
@@ -47,4 +48,5 @@ class BasePage {
     await browser.forward();
   }
 }
+
 export default BasePage;
